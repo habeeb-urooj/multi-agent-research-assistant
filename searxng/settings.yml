@@ -2,11 +2,10 @@ use_default_settings: true
 
 server:
   bind_address: "0.0.0.0"
-  port: 8080
-  secret_key: "PASTE_YOUR_RANDOM_KEY_HERE"
+  port: 10000
+  secret_key: "e5dc6badaac4f2ea42745e64de18883542fe2bd8f063fd88bb88d95143ad85e1"
   limiter: false
   public_instance: false
-
 search:
   formats:
     - html
