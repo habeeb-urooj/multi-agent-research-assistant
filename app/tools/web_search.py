@@ -1,4 +1,6 @@
 import logging
+import os
+
 import requests
 
 
@@ -16,9 +18,14 @@ class SearXNGSearch:
 
     def __init__(
         self,
-        base_url: str = "http://localhost:8080",
+        base_url: str | None = None,
         timeout: int = 20,
     ):
+        base_url = base_url or os.getenv(
+            "SEARXNG_URL",
+            "http://localhost:8080",
+        )
+
         self.base_url = base_url.rstrip("/")
         self.timeout = timeout
 
